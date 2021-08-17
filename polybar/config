@@ -1,8 +1,8 @@
 [bar/i3wmthemer_bar]
 width = 100%
 height = 27
-radius = 0
-fixed-center = false
+radius = 10
+fixed-center = true
 
 background = #00000000
 foreground = #000000
@@ -13,7 +13,7 @@ line-color =
 border-size = 0
 border-color =
 
-padding-left = 0
+padding-left = 2
 padding-right = 2
 
 module-margin-left = 1
@@ -23,7 +23,7 @@ font-0 = "Source Code Pro Semibold:size=10;1"
 font-1 = "Font Awesome 5 Free:style=Solid:size=10;1"
 font-2 = "Font Awesome 5 Brands:size=10;1"
 
-modules-left = wlan eth
+modules-left = wlan eth cpu load-average battery
 modules-center = i3
 modules-right = date powermenu
 
@@ -42,21 +42,21 @@ index-sort = true
 wrapping-scroll = false
 
 label-mode-padding = 2
-label-mode-foreground = #828282
+label-mode-foreground = #F0E807
 label-mode-background = #1f1f1f
 
 label-focused = %index%
-label-focused-background = #5A9B92
+label-focused-background = #C9A710
 label-focused-foreground = #1f1f1f
 label-focused-padding = 2
 
 label-unfocused = %index%
-label-unfocused-background = #8abeb7
+label-unfocused-background = #F0E807
 label-unfocused-foreground = #1f1f1f
 label-unfocused-padding = 2
 
 label-visible = %index%
-label-visible-background = #8abeb7
+label-visible-background = #F0E807
 label-visible-foreground = #1f1f1f
 label-visible-padding = 2
 
@@ -71,7 +71,7 @@ interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-foreground = #1f1f1f
-format-connected-background = #8abeb7
+format-connected-background = #F0E807
 format-connected-padding = 2
 label-connected = %essid%
 
@@ -90,13 +90,94 @@ interface = enp0s3
 interval = 3.0
 
 format-connected-padding = 2
-format-connected-foreground = #1f1f1f
-format-connected-background = #8abeb7
+format-connected-foreground = 
+format-connected-background = 
 format-connected-prefix = " "
-format-connected-prefix-foreground = #1f1f1f
+format-connected-prefix-foreground = 
 label-connected = %local_ip%
 
 format-disconnected =
+
+[module/cpu]
+type = internal/cpu
+interval = 0.5
+
+format = <label> <ramp-coreload>
+label = CPU %percentage%
+
+ramp-coreload-spacing = 1
+ramp-coreload-0 = ▁
+ramp-coreload-1 = ▂
+ramp-coreload-2 = ▃
+ramp-coreload-3 = ▄
+ramp-coreload-4 = ▅
+ramp-coreload-5 = ▆
+ramp-coreload-6 = ▇
+ramp-coreload-7 = █
+
+[module/load-average]
+type = custom/script
+exec = uptime | grep -ohe 'load average[s:][: ].*' | awk '{ print $3" "$4" "$5" " }' | sed 's/ ,//g'
+interval = 100
+
+label = %output:10%
+
+format-foreground = 
+format-background = 
+format-prefix = "  "
+format-prefix-foreground =  
+format-underline = 
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 95
+
+poll-interval = 5
+
+time-format = %H:%M
+
+format-charging = <animation-charging> <label-charging>
+label-charging = > %percentage%
+format-charging-foreground = 
+format-charging-background = 
+format-charging-underline = 
+
+format-discharging = <ramp-capacity> <label-discharging>
+label-discharging = < %percentage%
+format-discharging-foreground = 
+format-discharging-background = 
+format-discharging-underline =
+
+format-full-prefix = " "
+format-full-prefix-foreground = 
+format-full-underline = 
+format-foreground = 
+format-background = 
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity=4 = 
+ramp-capacity-foreground =
+
+animation-charging-1 = 
+animation-charging-0 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging=4 = 
+animation-charging-foreground =
+animation-charging-framerate = 750
+
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-3 = 
+animation-discharging-4 = 
+
+animation-discharging-framerate = 500
 
 [module/date]
 type = internal/date
@@ -110,7 +191,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-foreground = #1f1f1f
-format-background = #8abeb7
+format-background = #F0E807
 format-padding = 2
 
 label = %date% %time%
@@ -123,11 +204,11 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = #8abeb7
+label-open-foreground = #F0E807
 label-close =  cancel
-label-close-foreground = #8abeb7
+label-close-foreground = #F0E807
 label-separator = |
-label-separator-foreground = #8abeb7
+label-separator-foreground = #F0E807
 
 menu-0-0 = reboot
 menu-0-0-exec = menu-open-1

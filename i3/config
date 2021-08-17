@@ -211,9 +211,6 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-# Assign workspace to applications
-assign [class="vlc"] $ws3
-
 # Autostart applications
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b --config ~/.config/picom/personal.conf
 exec --no-startup-id nm-applet
@@ -225,25 +222,25 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 
 # Theme colors
-client.focused #c6c6c6 #ffffff #c6c6c6 #8abeb7 #8abeb7
-client.focused_inactive #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
-client.unfocused #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
-client.urgent #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
-client.placeholder #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
+# client.focused #c6c6c6 #ffffff #c6c6c6 #8abeb7 #8abeb7
+# client.focused_inactive #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
+# client.unfocused #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
+# client.urgent #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
+# client.placeholder #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
 
-client.background #1f1f1f
+# client.background #1f1f1f
 
 # Gaps
-gaps inner 25
-gaps outer 10
+gaps inner 30
+gaps outer 15
 
 # smart_gaps off
 
 # Border radius
-# border_radius 1
+# border_radius 10
 
 # Wallpaper
-exec --no-startup-id feh --bg-center ~/Pictures/Life_and_Death.png
+exec --no-startup-id feh --bg-center ~/Wallpaper/batman-minimal-art-yellow-background-black-dc-superheroes-3840x2647-1732.jpg
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
