@@ -13,7 +13,7 @@ font xft:URWGothic-Book 8
 
 floating_modifier $mod
 
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec termite
 
 # Window kill command
 bindsym $mod+Shift+q kill
@@ -156,7 +156,7 @@ for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
 
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 
 # switch to workspace with urgent window automatically
 for_window [urgent=latest] focus
@@ -222,11 +222,11 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id $HOME/.config/polybar/i3wmthemer_bar_launch.sh
 
 # Theme colors
-# client.focused #c6c6c6 #ffffff #c6c6c6 #8abeb7 #8abeb7
-# client.focused_inactive #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
-# client.unfocused #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
-# client.urgent #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
-# client.placeholder #c6c6c6 #1f1f1f #c6c6c6 #8abeb7 #8abeb7
+client.focused #c6c6c6 #ffffff #c6c6c6 #F0E807 #F0E807
+client.focused_inactive #c6c6c6 #1f1f1f #c6c6c6 #F0E807 #F0E807
+client.unfocused #c6c6c6 #1f1f1f #c6c6c6 #F0E807 #F0E807
+client.urgent #c6c6c6 #1f1f1f #c6c6c6 #F0E807 #F0E807
+client.placeholder #c6c6c6 #1f1f1f #c6c6c6 #F0E807 #F0E807
 
 # client.background #1f1f1f
 
@@ -240,7 +240,7 @@ gaps outer 15
 # border_radius 10
 
 # Wallpaper
-exec --no-startup-id feh --bg-center ~/Wallpaper/batman-minimal-art-yellow-background-black-dc-superheroes-3840x2647-1732.jpg
+exec --no-startup-id feh --bg-center ~/Wallpapers/batman-minimal-art-yellow-background-black-dc-superheroes-3840x2647-1732.jpg
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
