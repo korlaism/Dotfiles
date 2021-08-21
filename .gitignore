@@ -15,6 +15,7 @@
 /glib-2.0
 /gtk-3.0
 /gtk-4.0
+/hardhat-nodejs
 /jgit
 /KDE
 /kde.org
@@ -26,6 +27,7 @@
 /Postman
 /procps
 /pulse
+/rofi.old
 /session
 /truffle
 /vdirsyncer
@@ -76,6 +78,7 @@
 /plasma-org.kde.plasma.desktop-appletsrc
 /plasmarc
 /plasmashellrc
+/pmbootstrap.cfg
 /powermanagementprofilesrc
 /QtProject.conf
 /systemsettingsrc
