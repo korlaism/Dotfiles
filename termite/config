@@ -1,6 +1,6 @@
 [options]
 
-font = DejaVu Sans Mono for Powerline 14
+font = DejaVu Sans Mono for Powerline 9
 scrollback_lines = 10000
 
 [colors]
@@ -52,9 +52,9 @@ color15 = #eff1f5
 #active_foreground = #e68080
 #active_background = #3f3f3f
 #padding = 2
-#border = #3f3f3f
-#border_width = 0.5
-#roundness = 2.0
+border = #3f3f3f
+border_width = 0.5
+roundness = 2.0
 
 # vim: ft=dosini cms=#%s
 
