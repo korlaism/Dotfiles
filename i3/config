@@ -231,8 +231,8 @@ client.placeholder #c6c6c6 #1f1f1f #c6c6c6 #F0E807 #F0E807
 # client.background #1f1f1f
 
 # Gaps
-gaps inner 30
-gaps outer 15
+gaps inner 10
+gaps outer 10
 
 # smart_gaps off
 
