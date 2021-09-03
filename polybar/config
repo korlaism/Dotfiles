@@ -5,7 +5,7 @@ radius = 10
 fixed-center = true
 
 background = #00000000
-foreground = #000000
+foreground = #ffffff
 
 line-size = 3
 line-color =
@@ -73,7 +73,7 @@ interface = net1
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-foreground = #1f1f1f
+format-connected-foreground = #ffffff
 format-connected-background = #F0E807
 format-connected-padding = 2
 label-connected = %essid%
@@ -85,7 +85,7 @@ ramp-signal-1 = 
 ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
-ramp-signal-foreground = #1f1f1f
+ramp-signal-foreground = #ffffff
 
 [module/eth]
 type = internal/network
