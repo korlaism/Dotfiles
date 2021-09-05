@@ -19,7 +19,7 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -no-lazy-grab -show drun -modi drun -theme $HOME/.config/rofi/launchers/colorful/style_6
+bindsym $mod+d exec --no-startup-id rofi -no-lazy-grab -show drun -modi drun -theme $HOME/.config/rofi/launchers/colorful/style_12
 
 # Lock
 bindsym $mod+Shift+x exec $HOME/.bin/scripts/lock.sh
