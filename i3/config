@@ -19,7 +19,7 @@ bindsym $mod+Return exec termite
 bindsym $mod+Shift+q kill
 
 # start program launcher
-bindsym $mod+d exec --no-startup-id rofi -no-lazy-grab -show drun -modi drun -theme $HOME/.config/rofi/launchers/colorful/style_12
+bindsym $mod+d exec --no-startup-id rofi -no-lazy-grab -show drun -modi drun -theme $HOME/.config/rofi/launchers/colorful/style_12.rasi
 
 # Lock
 bindsym $mod+Shift+x exec $HOME/.bin/scripts/lock.sh
@@ -231,8 +231,8 @@ client.placeholder #c6c6c6 #1f1f1f #c6c6c6 #F0E807 #F0E807
 # client.background #1f1f1f
 
 # Gaps
-gaps inner 20
-gaps outer 20
+gaps inner 15
+gaps outer 30
 
 # smart_gaps off
 

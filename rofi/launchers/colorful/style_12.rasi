@@ -35,7 +35,7 @@ window {
 }
 
 prompt {
-    enabled: 						true;
+    enabled: 						false;
 	padding: 						1.25% 0.75% 1.25% 0.75%;
 	background-color: 				@ac;
 	text-color: 					@fg;
@@ -85,7 +85,7 @@ listview {
 
 mainbox {
     background-color:               @al;
-	border:							10px 0px 10px 0px;
+	border:							5px 0px 5px 0px;
     border-radius:                  50px;
 	border-color:					@ac;
     children:                       [ inputbar, listview ];
@@ -116,6 +116,9 @@ element-text {
     vertical-align:                 0.5;
     margin:                         0.5% 0.25% 0.5% 0.25%;
     padding:                        1% 0.5% 1% 0.5%;
+    border-radius:                  100%;
+    background-color:               @se;
+    text-color:                     @fg;
 }
 
 element-text selected {
